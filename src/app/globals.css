@@ -1,0 +1,36 @@
+/* styles/globals.css or styles.css */
+@import '@fontsource/dm-sans/400.css'; 
+@import '@fontsource/dm-sans/500.css'; 
+@import '@fontsource/inter/400.css'; 
+@import '@fontsource/inter/500.css'; 
+@import '@fontsource/inter/600.css';
+@import '@fontsource/inter/700.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+:root {
+  --background:#F1F5F9;
+  --foreground: #0F172A;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0F172A;
+    --foreground: #F1F5F9;
+  }
+}
+
+body {
+  font-family: 'DM Sans', sans-serif; /* Set DM Sans as the font for the body */
+  color: var(--foreground);
+  background: var(--background);
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance; /* Custom utility class */
+  }
+}
